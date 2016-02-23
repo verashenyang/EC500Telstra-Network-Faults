@@ -5,30 +5,43 @@
 <style type="text/css">
   html { height: 100% }
   body { height: 100%; margin: 0px; padding: 0px; background-color: gray;}
-  #map_canvas { height: 100% }
+  #mapContent{
+  overflow:hidden;
+  height:100%;
+  position:relative;
+  }
+  #map_canvas { 
+  margin-top: 80px;
+  border-left: 0px 
+  solid #e9e9e9;
+  overflow:hidden;
+  height:100%;
+  position:relative;
+  }
   #header{
   width: 100%;
-  height: 50px;
-  background-color: #0075c7;
+  height: 80px;
+  background-color: #99bbbb;
   position: absolute;
-}
+  }
   #header .logo{
   height: 34px;
   float: left;
   margin-top: 6px;
   margin-left: 20px;
-}
+  }
   #menu{
   min-width:280px;
   float:left;
   border-right:1px solid #e9e9e9;
   overflow-y: scroll;
   height: 100%;
-}
+  }
 </style>
 <script type="text/javascript"
     src="https://maps.google.com/maps/api/js?sensor=false">
 </script>
+
 <script type="text/javascript">
   var marker;
   var map;
@@ -84,28 +97,30 @@
         //在这里把值回传给php
   }  
 </script>
-</head>
-<body onload="initialize()">
 
+</head>
+<body  onload="initialize()">
   <div id="header">
-    <a class="logo">
-      <p>Australia Network Faults</p>
+    <h1 align="center">Australia Network Faults</h1>
+    <a class="logo">  
     </a>
   </div>
 
   <div id="menu">
   </br>
-</br>
+  </br>
     <p>Please input the ID you want to search</p>
     <div align="center" padding_top="20">
     <div ><p id="lng">    Latitude:</p></div>
     <div id = "lat">      Longtitude:</div>
+    <button style="width:200px;height:30px" name="confirm" onclick="oncfrimlocation();">确定</button>
+    </div>
+
+  </div>
+    <div id="mapContent" >
+     <div margin_top = "20" id="map_canvas" style="width:100%; height:80%;margin-top: 20"></div>
   </div>
 
-
-
-<button style="width:200px;height:30px" name="confirm" onclick="oncfrimlocation();">确定</button>
-</div>
-  <div margin_top = "20" id="map_canvas" style="width:100%; height:80%;margin-top: 20"></div>
+  
 </body>
 </html>
