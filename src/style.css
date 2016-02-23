@@ -1,0 +1,34 @@
+  html { height: 100% }
+  body { height: 100%; margin: 0px; padding: 0px; background-color: gray;}
+  #mapContent{
+  overflow:hidden;
+  height:100%;
+  position:relative;
+  }
+  #map_canvas { 
+  margin-top: 80px;
+  border-left: 0px 
+  solid #e9e9e9;
+  overflow:hidden;
+  height:100%;
+  position:relative;
+  }
+  #header{
+  width: 100%;
+  height: 80px;
+  background-color: #99bbbb;
+  position: absolute;
+  }
+  #header .logo{
+  height: 34px;
+  float: left;
+  margin-top: 6px;
+  margin-left: 20px;
+  }
+  #menu{
+  min-width:280px;
+  float:left;
+  border-right:1px solid #e9e9e9;
+  overflow-y: scroll;
+  height: 100%;
+  }
