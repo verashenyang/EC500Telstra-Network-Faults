@@ -1,5 +1,8 @@
   html { height: 100% }
   body { height: 100%; margin: 0px; padding: 0px; background-color: gray;}
+  h1 {color:greenyellow;}
+  h2 {color:skyblue;}
+  img{width:200px;height:60px}
   #mapContent{
   overflow:hidden;
   height:100%;
@@ -19,16 +22,20 @@
   background-color: #99bbbb;
   position: absolute;
   }
-  #header .logo{
-  height: 34px;
+  #logo{
   float: left;
-  margin-top: 6px;
+  margin-top: 10px;
   margin-left: 20px;
+  width:150px;
+  height:60px
   }
-  #menu{
-  min-width:280px;
+  div#menu{
+  min-width:140px;
   float:left;
-  border-right:1px solid #e9e9e9;
+  border-right:0px solid #e9e9e9;
   overflow-y: scroll;
   height: 100%;
+  background-color:#ffff99;
   }
+
+  
