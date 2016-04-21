@@ -8,6 +8,7 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script type="text/javascript" src="./js/map.js"></script>
 <script type="text/javascript" src="./js/database.js"></script>
 <!-- css -->
@@ -18,7 +19,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--// bootstarp-css -->
 <script src="./js/jquery-1.11.1.min.js"></script>
 <!--fonts-->
-<link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,800,700,600' rel='stylesheet' type='text/css'>
+<link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,800,700,600' rel='stylesheet' type='textareaext/css'>
 <!--/fonts-->
 <link href="./css/animate.css" rel="stylesheet" type="text/css" media="all">
 <script src="./js/wow.min.js"></script>
@@ -62,6 +63,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!-- //banner -->
 	<!-- mail -->
+
 	<div class="mail">
 		<!-- container -->
 <div class="container">
@@ -70,36 +72,53 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>	
 			<div class="mail-grids">
 				<div class="col-md-6 contact-form mail-grid-left wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+            <button onclick="initialize()" value="submit" type="submit">Clear map</button>
 				<h3>Search by fault severity</h3>
-				</br>
-                
-                Fault Severity 0：&nbsp
-                <input type="checkbox" name="Fault Severity 0" id="check0">
+				
+                <h5 style="font-size:20px">Fault Severity 0：&nbsp
+                <input type="checkbox" name="Fault Severity 0" id="check0"></br></h5>
 
-                Fault Severity 1：&nbsp
-                <input type="checkbox" name="Fault Severity 1" id="check1">
+                <h5 style="font-size:20px">Fault Severity 1：&nbsp
+                <input type="checkbox" name="Fault Severity 1" id="check1"></br></h5>
 
-                Fault Severity 2：&nbsp
-                <input type="checkbox" name="Fault Severity 2" id="check2">
+                <h5 style="font-size:20px">Fault Severity 2：&nbsp
+                <input type="checkbox" name="Fault Severity 2" id="check2"></br></h5>
 
                 
                 <!--<textarea placeholder="The result will show here" required=""></textarea>-->
-                <button onclick="searchSev()">Submit</button>
+                <button onclick="searchSev()" id = "submitsev" >Submit</button>
+                <button class="closesev">Hide result</button>
                 <p id="demosev"></p>
-                <input type="submit" value="submit">
+                <script>
+$(document).ready(function(){
+    $(".closesev").click(function(){
+        $("#demosev").hide();
+    });
+});
+</script>
+                
 				</div>
 				<div class="col-md-6 contact-form mail-grid-left wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 					<h3>Search by id</h3>
-					
-						<input name="id" type="text" placeholder="ID" id="searchTxt">
-						<button onclick="searchId()">Submit</button>
+						<input name="id" type="text" placeholder="ID" id="searchTxt"><button onclick="searchId()">Submit</button>
 						<p id="demoid"></p>
 					<h3>Search by location</h3>
 						
 						<input name="loc" type="text" placeholder="Location" id="loc">
-					<button onclick="searchLoc()">Submit</button>
-					<input type="submit"  value="submit" />
-						<p id="demoloc"></p>
+					<button onclick="searchLoc()" id="submitloc">Submit</button>
+					                <button class="closeloc">Hide result</button>
+                <p id="demoloc"></p>
+                <script>
+$(document).ready(function(){
+    $(".closeloc").click(function(){
+        $("#demoloc").hide();
+    });
+    $("#submitloc").click(function(){
+        $("#demoloc").show();
+    });
+});
+</script>
+						
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -111494,8 +111513,13 @@ function searchIdHelper(){
 }
 function searchId(){
 	var foundid = searchIdHelper();
-	document.getElementById("demoid").innerHTML = "Location is = "+foundid[0].location+", severity is = "+foundid[0].severity;
-  mark(foundid[0].lat,foundid[0].lon,foundid[0].severity);
+    if(foundid.length==0){
+      res="Sorry, there is no record for your search.";
+  }else{
+      res="Location is = "+foundid[0].location+", severity is = "+foundid[0].severity;
+  }
+	document.getElementById("demoid").innerHTML = res;
+  mark(foundid[0].lat,foundid[0].lon,foundid[0].severity,foundid[0].location);
 }
 //location
 function searchLocHelper(){
@@ -111508,12 +111532,16 @@ function searchLocHelper(){
 }
 function searchLoc(){
 	var foundloc = searchLocHelper();
-	var res = "";
+  var res = "";
+  if(foundloc.length==0){
+      res="Sorry, there is no record for your search.";
+  }else{
 	for(var i=0;i<foundloc.length;i++){
     res = res + "   Id is = "+foundloc[i].id+", severity is = "+foundloc[i].severity + "</br>";
   }
+}
   	document.getElementById("demoloc").innerHTML = res;
-    mark(foundloc[0].lat,foundloc[0].lon,null);
+    mark(foundloc[0].lat,foundloc[0].lon,null,loc);
 }
 //severity
 function searchSevHelper0(sev){
@@ -111548,32 +111576,39 @@ function searchSev(){
 		var res = searchSevHelper1(2);
 		result = result + res;
 	}
-	document.getElementById("demosev").innerHTML = "hello"+result+sev0.checked+sev1.checked+sev2.checked;
+	document.getElementById("demosev").innerHTML = result;//+"hello"+sev0.checked+sev1.checked+sev2.checked;
 
 }
-
-
-  function mark(lat,lon,s){
+function addmark(lat,lon){
     var latlng = new google.maps.LatLng(lat,lon);
-    var contentString = s;
-    var myOptions = {
-      zoom: 4,
-      center: latlng,
-      mapTypeControl: true,
-      mapTypeId: google.maps.MapTypeId.ROADMAP//标准地图还是卫星地图
-    };
-    map = new google.maps.Map(document.getElementById("map_canvas"),
-        myOptions);
-
-
     
     var marker= new google.maps.Marker({
       position: latlng, 
       map: map, 
-      label:contentString
+      });  
+}
+
+  function mark(lat,lon,s,loc){
+    var latlng = new google.maps.LatLng(lat,lon);
+    var contentString = s;
+    
+    var marker= new google.maps.Marker({
+      position: latlng, 
+      map: map, 
+      label:contentString,
       });   
     //marker.setMap(map);
+//added on 21,April
+    var info = "Location: "+ loc;
+  var infowindow = new google.maps.InfoWindow({
+    content: info
+  });
+
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
   }
+
 
 
 </script>
