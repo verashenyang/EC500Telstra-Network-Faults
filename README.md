@@ -1,7 +1,9 @@
 # EC500Telstra-Network-Faults
 --------
 Website
+---------
 1.Home Page
+---------
 ![alt text](/src/images/mdsource/Information about Telstra.jpg "Yu Zhao")
 In this part, we give some basic information about Australian biggest Telecom company-Telstra. Also, we connect our homepage with Telstra’s official website.
 
@@ -12,6 +14,7 @@ In this part, we have some introduction about our services.
 In this part, we provide some latest happenings about Telstra to make the customers know some important news.
 
 2.About Page
+---------
 ![alt text](/src/images/mdsource/Allocation of the job.jpg "Yu Zhao")
 In this part, it is about the allocation about our work.
 
@@ -22,6 +25,7 @@ In this part, we give some concrete information about the division of our job: t
 In this part, we have the five images of our team members in order to make people know more about our web and make the webpage more interesting.
 
 3.Prediction
+---------
 ![alt text](/src/images/mdsource/Algorithm.jpg "Yu Zhao")
 In this part, we give some information about the algorithm that we apply: SVM and Random Forests. As a matter of fact, SVM can provide us with the accuracy about 68% and Random Forests can offer us the accuracy about 70% which is slightly better.
 
@@ -29,6 +33,7 @@ In this part, we give some information about the algorithm that we apply: SVM an
 In this part, we show the recent process of our work and the recent accomplishment.
 
 4.Product
+---------
 Product:
 
 ![alt text](/src/images/mdsource/Whole function.jpg "Yu Zhao")
@@ -50,14 +55,16 @@ In this part, it is the marking result that is on the map.
 In this part, if we input the number that exceeds that range, we will not be able to get the right result.
 
 5.Events Page
+---------
 ![alt text](/src/images/mdsource/A few words about our webpage.jpg "Yu Zhao")
 In this part, we give some basic information about content of every webpage.
 
 ![alt text](/src/images/mdsource/Experience.jpg "Yu Zhao")
 In this part, we talk about the experience we have gone through during the whole project.
----------
+
 Agorithms
-------Random Forests：
+---------
+Random Forests：
 
 1.Why using Random Forests?
 
