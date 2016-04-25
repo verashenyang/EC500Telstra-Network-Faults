@@ -70,11 +70,14 @@ Random Forests：
 ---------
 Random Forests are easy to use, the only 2 parameters are the number of trees to be used and the number of variables (m) to be randomly selected from the available set of variables.
 
+
 2.How to grow Random Forest
 ---------
 If the number of cases in the training set is N, sample N cases at random with replacement, from the original data. This sample will be the training set for the growing tree.
 If there are M input variables, m=sqrt(M) variables are selected at random out of the M and the best split is used to split the node. Each tree is grown to its large extent possible, no pruning.
 
+
 3.How to predict using Random Forest?
 ---------
 After Random Forest is built, each test data run through all decision trees, and the results are computed. We choose the class with maximum number to be the final prediction result.
+
