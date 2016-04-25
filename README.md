@@ -35,12 +35,11 @@ In this part, we show the recent process of our work and the recent accomplishme
 
 4.Product
 ---------
-Product:
 
 ![alt text](/src/images/mdsource/Whole function.jpg "4")
 In this part, we mainly have three parts of function: search by fault severity, search id, search by location. When we submit the number we input, all the results will come out. After that, we can clear the map and start searching again.
 
-![alt text](/src/images/mdsource/Search by Fault Severity.jpg "4")
+![alt text](/src/images/mdsource/Search by fault Severity.jpg "4")
 In this part, we can search by fault severity. Determine the fault severity and press the submit button, all id and the related fault severity will come out. We can press the Hide result button, the results will be hidden.   
 
 ![alt text](/src/images/mdsource/Search by id.jpg "4")
