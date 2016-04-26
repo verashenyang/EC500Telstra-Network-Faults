@@ -65,7 +65,7 @@ In this part, we talk about the experience we have gone through during the whole
 Agorithms
 =================
 Random Forests：
-
+---------
 1.Why using Random Forests?
 ---------
 Random Forests are easy to use, the only 2 parameters are the number of trees to be used and the number of variables (m) to be randomly selected from the available set of variables.
