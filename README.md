@@ -1,7 +1,7 @@
 # EC500Telstra-Network-Faults
 --------
 Website
----------
+=================
 1.Home Page
 ---------
 ![alt text](/src/images/mdsource/Information about Telstra.jpg "1")
@@ -63,7 +63,7 @@ In this part, we basically introduce the function and basic information about th
 In this part, we talk about the experience we have gone through during the whole project, including the techs we apply., the difficulties we met with and the results we get.
 
 Agorithms
----------
+=================
 Random Forests：
 
 1.Why using Random Forests?
@@ -81,8 +81,8 @@ If there are M input variables, m=sqrt(M) variables are selected at random out o
 ---------
 After Random Forest is built, each test data run through all decision trees, and the results are computed. We choose the class with maximum number to be the final prediction result.
 
-Random Forests：
----------
+SVM：
+=================
 Libsvm is a simple, easy-to-use, and efficient software for SVM
 classification and regression. It solves C-SVM classification, nu-SVM
 classification, one-class-SVM, epsilon-SVM regression, and nu-SVM
@@ -90,7 +90,7 @@ regression. It also provides an automatic model selection tool for
 C-SVM classification. This document explains the use of libsvm.
 
 Table of Contents
-=================
+---------
 
 - Quick Start
 - Installation and Data Format
@@ -109,12 +109,12 @@ Table of Contents
 - Additional Information
 
 Quick Start
-===========
+---------
 
 You can only to run this package under Windows system, using cmd. If you want to duplicate our result, go to the SVM package, run predict.exe file with training data to build the model. And then try the testing data and get the result.  
 
 Data Format
-============================
+---------
 
 
 The format of training and testing data file is:
@@ -182,7 +182,7 @@ svm-toy:
 	maximal cache size is 2GB.
 
 `svm-train' Usage
-=================
+---------
 
 Usage: svm-train [options] training_set_file [model_file]
 options:
@@ -221,7 +221,7 @@ validation accuracy/mean squared error on them.
 See libsvm FAQ for the meaning of outputs.
 
 `svm-predict' Usage
-===================
+---------
 
 Usage: svm-predict [options] test_file model_file output_file
 options:
@@ -232,7 +232,7 @@ test_file is the test data you want to predict.
 svm-predict will produce output in the output_file.
 
 `svm-scale' Usage
-=================
+---------
 
 Usage: svm-scale [options] data_filename
 options:
@@ -245,7 +245,7 @@ options:
 See 'Examples' in this file for examples.
 
 Tips on Practical Use
-=====================
+---------
 
 * Scale your data. For example, scale each attribute to [0,1] or [-1,+1].
 * For C-SVC, consider using the model selection tool in the tools directory.
@@ -257,7 +257,7 @@ Tips on Practical Use
 * Specify larger cache size (i.e., larger -m) for huge problems.
 
 Examples
-========
+---------
 
 > svm-scale -l -1 -u 1 -s range train > train.scale
 > svm-scale -r range test > test.scale
@@ -293,7 +293,7 @@ Obtain a model with probability information and predict test data with
 probability estimates
 
 Precomputed Kernels 
-===================
+---------
 
 Users may precompute kernel values and input them as training and
 testing files.  Then libsvm does not need the original
@@ -355,7 +355,7 @@ Examples:
 		[K(3,2) K(3,3)] = [0  1]
 
 Library Usage
-=============
+---------
 
 These functions and structures are declared in the header file
 `svm.h'.  You need to #include "svm.h" in your C/C++ source files and
@@ -761,7 +761,7 @@ Users can specify their output format by
 	svm.svm_set_print_string_function(your_print_func);
 
 Building Windows Binaries
-=========================
+---------
 
 Windows binaries are available in the directory `windows'. To re-build
 them via Visual C++, use the following steps:
@@ -791,22 +791,22 @@ Another way is to build them from Visual C++ environment. See details
 in libsvm FAQ.
 
 - Additional Tools: Sub-sampling, Parameter Selection, Format checking, etc.
-============================================================================
+---------
 
 See the README file in the tools directory.
 
 MATLAB/OCTAVE Interface
-=======================
+---------
 
 Please check the file README in the directory `matlab'.
 
 Python Interface
-================
+---------
 
 See the README file in python directory.
 
 Additional Information
-======================
+---------
 
 If you find LIBSVM helpful, please cite it as
 
