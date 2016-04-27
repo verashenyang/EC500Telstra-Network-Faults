@@ -155,7 +155,6 @@ There are some other useful programs in this package.
 
 svm-scale:
 
-<<<<<<< HEAD
     This is a tool for scaling input data file.
 
 svm-toy:
