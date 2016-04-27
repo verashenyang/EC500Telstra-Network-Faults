@@ -81,6 +81,7 @@ If there are M input variables, m=sqrt(M) variables are selected at random out o
 ---------
 After Random Forest is built, each test data run through all decision trees, and the results are computed. We choose the class with maximum number to be the final prediction result.
 
+<<<<<<< HEAD
 4.How to use Random Forest?
 ---------
 1.Download the Random Forest folder. 
@@ -89,6 +90,8 @@ After Random Forest is built, each test data run through all decision trees, and
 4.Run the MainRun.java file in Java or Java IDE(such as Eclipse). 
 5.The result will be output as test_result.txt file in wherever you put it(by changing the pathname in step3).
 
+=======
+>>>>>>> 654cc5d2e45607eb17dffd1a9c9bb124cddadb21
 SVM：
 =================
 Libsvm is a simple, easy-to-use, and efficient software for SVM
@@ -155,6 +158,7 @@ There are some other useful programs in this package.
 
 svm-scale:
 
+<<<<<<< HEAD
     This is a tool for scaling input data file.
 
 svm-toy:
@@ -188,6 +192,41 @@ svm-toy:
     The pre-built Windows binaries are in the `windows'
     directory. We use Visual C++ on a 32-bit machine, so the
     maximal cache size is 2GB.
+=======
+	This is a tool for scaling input data file.
+
+svm-toy:
+
+	This is a simple graphical interface which shows how SVM
+	separate data in a plane. You can click in the window to 
+	draw data points. Use "change" button to choose class 
+	1, 2 or 3 (i.e., up to three classes are supported), "load"
+	button to load data from a file, "save" button to save data to
+	a file, "run" button to obtain an SVM model, and "clear"
+	button to clear the window.
+
+	You can enter options in the bottom of the window, the syntax of
+	options is the same as `svm-train'.
+
+	Note that "load" and "save" consider dense data format both in
+	classification and the regression cases. For classification,
+	each data point has one label (the color) that must be 1, 2,
+	or 3 and two attributes (x-axis and y-axis values) in
+	[0,1). For regression, each data point has one target value
+	(y-axis) and one attribute (x-axis values) in [0, 1).
+
+	Type `make' in respective directories to build them.
+
+	You need Qt library to build the Qt version.
+	(available from http://www.trolltech.com)
+
+	You need GTK+ library to build the GTK version.
+	(available from http://www.gtk.org)
+	
+	The pre-built Windows binaries are in the `windows'
+	directory. We use Visual C++ on a 32-bit machine, so the
+	maximal cache size is 2GB.
+>>>>>>> 654cc5d2e45607eb17dffd1a9c9bb124cddadb21
 
 `svm-train' Usage
 ---------
@@ -195,6 +234,7 @@ svm-toy:
 Usage: svm-train [options] training_set_file [model_file]
 options:
 -s svm_type : set type of SVM (default 0)
+<<<<<<< HEAD
     0 -- C-SVC      (multi-class classification)
     1 -- nu-SVC     (multi-class classification)
     2 -- one-class SVM  
@@ -206,6 +246,19 @@ options:
     2 -- radial basis function: exp(-gamma*|u-v|^2)
     3 -- sigmoid: tanh(gamma*u'*v + coef0)
     4 -- precomputed kernel (kernel values in training_set_file)
+=======
+	0 -- C-SVC		(multi-class classification)
+	1 -- nu-SVC		(multi-class classification)
+	2 -- one-class SVM	
+	3 -- epsilon-SVR	(regression)
+	4 -- nu-SVR		(regression)
+-t kernel_type : set type of kernel function (default 2)
+	0 -- linear: u'*v
+	1 -- polynomial: (gamma*u'*v + coef0)^degree
+	2 -- radial basis function: exp(-gamma*|u-v|^2)
+	3 -- sigmoid: tanh(gamma*u'*v + coef0)
+	4 -- precomputed kernel (kernel values in training_set_file)
+>>>>>>> 654cc5d2e45607eb17dffd1a9c9bb124cddadb21
 -d degree : set degree in kernel function (default 3)
 -g gamma : set gamma in kernel function (default 1/num_features)
 -r coef0 : set coef0 in kernel function (default 0)
