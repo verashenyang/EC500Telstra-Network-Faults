@@ -141,8 +141,6 @@ You need GTK+ library to build the GTK version.
 (available from http://www.gtk.org)
     
 The pre-built Windows binaries are in the `windows' directory. We use Visual C++ on a 32-bit machine, so the maximal cache size is 2GB.
-=======
-	This is a tool for scaling input data file.
 
 svm-toy:
 
