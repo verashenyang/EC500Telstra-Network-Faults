@@ -81,7 +81,6 @@ If there are M input variables, m=sqrt(M) variables are selected at random out o
 ---------
 After Random Forest is built, each test data run through all decision trees, and the results are computed. We choose the class with maximum number to be the final prediction result.
 
-<<<<<<< HEAD
 4.How to use Random Forest?
 ---------
 1.Download the Random Forest folder. 
@@ -90,8 +89,6 @@ After Random Forest is built, each test data run through all decision trees, and
 4.Run the MainRun.java file in Java or Java IDE(such as Eclipse). 
 5.The result will be output as test_result.txt file in wherever you put it(by changing the pathname in step3).
 
-=======
->>>>>>> 654cc5d2e45607eb17dffd1a9c9bb124cddadb21
 SVM：
 =================
 Libsvm is a simple, easy-to-use, and efficient software for SVM
