@@ -108,99 +108,60 @@ If you want to try your own data sets, you have to adjust the format of data.
 
 The format of training and testing data file is:
 
-label index1 :value1 index2:value2 ...
+    label index1 :value1 index2:value2 ...
 
 
-Each line contains an instance and is ended by a '\n' character.  For
-classification, <label> is an integer indicating the class label
-(multi-class is supported). For regression, <label> is the target
-value which can be any real number. For one-class SVM, it's not used
-so can be any number.  The pair <index>:<value> gives a feature
-(attribute) value: <index> is an integer starting from 1 and <value>
-is a real number. The only exception is the precomputed kernel, where
-<index> starts from 0; see the section of precomputed kernels. Indices
-must be in ASCENDING order. Labels in the testing file are only used
-to calculate accuracy or errors. If they are unknown, just fill the
-first column with any numbers.
+Each line contains an instance and is ended by a '\n' character.  For classification, <label> is an integer indicating the class label (multi-class is supported). For regression, <label> is the target value which can be any real number. For one-class SVM, it's not used so can be any number.  The pair <index>:<value> gives a feature (attribute) value: <index> is an integer starting from 1 and <value> is a real number. The only exception is the precomputed kernel, where <index> starts from 0; see the section of precomputed kernels. Indices must be in ASCENDING order. Labels in the testing file are only used
+to calculate accuracy or errors. If they are unknown, just fill the first column with any numbers.
 
 
-For classification, if training data are in only one class (i.e., all
-labels are the same), then `svm-train' issues a warning message:
+For classification, if training data are in only one class (i.e., all labels are the same), then `svm-train' issues a warning message:
 `Warning: training data in only one class. See README for details,'
-which means the training data is very unbalanced. The label in the
-training data is directly returned when testing.
+which means the training data is very unbalanced. The label in the training data is directly returned when testing.
 
 There are some other useful programs in this package.
 
-svm-scale:
+    svm-scale:
+This is a tool for scaling input data file.
 
-    This is a tool for scaling input data file.
-
-svm-toy:
-
-    This is a simple graphical interface which shows how SVM
-    separate data in a plane. You can click in the window to 
-    draw data points. Use "change" button to choose class 
-    1, 2 or 3 (i.e., up to three classes are supported), "load"
-    button to load data from a file, "save" button to save data to
-    a file, "run" button to obtain an SVM model, and "clear"
-    button to clear the window.
-
-    You can enter options in the bottom of the window, the syntax of
-    options is the same as `svm-train'.
-
-    Note that "load" and "save" consider dense data format both in
-    classification and the regression cases. For classification,
-    each data point has one label (the color) that must be 1, 2,
-    or 3 and two attributes (x-axis and y-axis values) in
-    [0,1). For regression, each data point has one target value
-    (y-axis) and one attribute (x-axis values) in [0, 1).
-
-    Type `make' in respective directories to build them.
-
-    You need Qt library to build the Qt version.
-    (available from http://www.trolltech.com)
-
-    You need GTK+ library to build the GTK version.
-    (available from http://www.gtk.org)
+    svm-toy:
     
-    The pre-built Windows binaries are in the `windows'
-    directory. We use Visual C++ on a 32-bit machine, so the
-    maximal cache size is 2GB.
+This is a simple graphical interface which shows how SVM separate data in a plane. You can click in the window to draw data points. Use "change" button to choose class 1, 2 or 3 (i.e., up to three classes are supported), "load" button to load data from a file, "save" button to save data to a file, "run" button to obtain an SVM model, and "clear" button to clear the window.
+    
+You can enter options in the bottom of the window, the syntax of options is the same as `svm-train'.
+    
+Note that "load" and "save" consider dense data format both in classification and the regression cases. For classification,each data point has one label (the color) that must be 1, 2,or 3 and two attributes (x-axis and y-axis values) in[0,1). For regression, each data point has one target value (y-axis) and one attribute (x-axis values) in [0, 1).
+    
+Type `make' in respective directories to build them.
+    
+You need Qt library to build the Qt version.
+(available from http://www.trolltech.com)
+    
+You need GTK+ library to build the GTK version.
+(available from http://www.gtk.org)
+    
+The pre-built Windows binaries are in the `windows' directory. We use Visual C++ on a 32-bit machine, so the maximal cache size is 2GB.
 =======
 	This is a tool for scaling input data file.
 
 svm-toy:
 
-	This is a simple graphical interface which shows how SVM
-	separate data in a plane. You can click in the window to 
-	draw data points. Use "change" button to choose class 
-	1, 2 or 3 (i.e., up to three classes are supported), "load"
-	button to load data from a file, "save" button to save data to
-	a file, "run" button to obtain an SVM model, and "clear"
-	button to clear the window.
+This is a simple graphical interface which shows how SVM separate data in a plane. You can click in the window to draw data points. Use "change" button to choose class 1, 2 or 3 (i.e., up to three classes are supported), "load" button to load data from a file, "save" button to save data to a file, "run" button to obtain an SVM model, and "clear" button to clear the window.
 
-	You can enter options in the bottom of the window, the syntax of
-	options is the same as `svm-train'.
+You can enter options in the bottom of the window, the syntax of options is the same as `svm-train'.
 
-	Note that "load" and "save" consider dense data format both in
-	classification and the regression cases. For classification,
-	each data point has one label (the color) that must be 1, 2,
-	or 3 and two attributes (x-axis and y-axis values) in
-	[0,1). For regression, each data point has one target value
-	(y-axis) and one attribute (x-axis values) in [0, 1).
+Note that "load" and "save" consider dense data format both in classification and the regression cases. For classification,
+each data point has one label (the color) that must be 1, 2,or 3 and two attributes (x-axis and y-axis values) in [0,1). For regression, each data point has one target value (y-axis) and one attribute (x-axis values) in [0, 1).
 
-	Type `make' in respective directories to build them.
+Type `make' in respective directories to build them.
 
-	You need Qt library to build the Qt version.
-	(available from http://www.trolltech.com)
+You need Qt library to build the Qt version.
+(available from http://www.trolltech.com)
 
-	You need GTK+ library to build the GTK version.
-	(available from http://www.gtk.org)
+You need GTK+ library to build the GTK version.
+(available from http://www.gtk.org)
 	
-	The pre-built Windows binaries are in the `windows'
-	directory. We use Visual C++ on a 32-bit machine, so the
-	maximal cache size is 2GB.
+The pre-built Windows binaries are in the `windows'directory. We use Visual C++ on a 32-bit machine, so the maximal cache size is 2GB.
 
 'svm-train' Usage
 ------------
