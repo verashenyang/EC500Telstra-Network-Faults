@@ -83,11 +83,11 @@ After Random Forest is built, each test data run through all decision trees, and
 
 4.How to use Random Forest?
 ---------
-1.Download the Random Forest folder. 
-2.Change the path of traindata and testdata in MainRun.java to your own path in computer. (few lines from the top)
-3.Change the path of pathname of results in RandomForest.java to your own path in computer.(few lines from the top)
-4.Run the MainRun.java file in Java or Java IDE(such as Eclipse). 
-5.The result will be output as test_result.txt file in wherever you put it(by changing the pathname in step3).
+1. Download the Random Forest folder. 
+2. Change the path of traindata and testdata in MainRun.java to your own path in computer. (few lines from the top)
+3. Change the path of pathname of results in RandomForest.java to your own path in computer.(few lines from the top)
+4. Run the MainRun.java file in Java or Java IDE(such as Eclipse). 
+5. The result will be output as test_result.txt file in wherever you put it(by changing the pathname in step3).
 
 SVM：
 =================
