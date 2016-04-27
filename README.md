@@ -97,15 +97,6 @@ classification, one-class-SVM, epsilon-SVM regression, and nu-SVM
 regression. It also provides an automatic model selection tool for
 C-SVM classification. This document explains the use of libsvm.
 
-Table of Contents
-------------
-
-- Quick Start
-- Installation and Data Format
-- `svm-train' Usage
-- `svm-predict' Usage
-- `svm-scale' Usage
-
 Quick Start
 ---------
 
