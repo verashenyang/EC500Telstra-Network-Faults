@@ -227,17 +227,6 @@ svm-toy:
 Usage: svm-train [options] training_set_file [model_file]</br>
 options:
 -s svm_type : set type of SVM (default 0)</br>
-    0 -- C-SVC      (multi-class classification)</br>
-    1 -- nu-SVC     (multi-class classification)</br>
-    2 -- one-class SVM  </br>
-    3 -- epsilon-SVR    (regression)</br>
-    4 -- nu-SVR     (regression)</br>
--t kernel_type : set type of kernel function (default 2)</br>
-    0 -- linear: u'*v</br>
-    1 -- polynomial: (gamma*u'*v + coef0)^degree</br>
-    2 -- radial basis function: exp(-gamma*|u-v|^2)</br>
-    3 -- sigmoid: tanh(gamma*u'*v + coef0)</br>
-    4 -- precomputed kernel (kernel values in training_set_file)</br>
 
 	0 -- C-SVC		(multi-class classification)</br>
 	1 -- nu-SVC		(multi-class classification)</br>
@@ -245,6 +234,7 @@ options:
 	3 -- epsilon-SVR	(regression)</br>
 	4 -- nu-SVR		(regression)</br>
 -t kernel_type : set type of kernel function (default 2)</br>
+
 	0 -- linear: u'*v</br>
 	1 -- polynomial: (gamma*u'*v + coef0)^degree</br>
 	2 -- radial basis function: exp(-gamma*|u-v|^2)</br>
