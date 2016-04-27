@@ -13,6 +13,8 @@ import java.util.concurrent.TimeUnit;
  */
 public class RandomForest {
 	
+	public static String pathname="/Users/xiaofan/Documents/workspaceluna/random forest/test_result.txt";
+	
 	/** the number of threads to use when generating the forest */
 	private static final int NUM_THREADS=Runtime.getRuntime().availableProcessors();
 	/** the number of categorical responses of the data (the classes, the "Y" values) - set this before beginning the forest creation */
@@ -93,7 +95,7 @@ public class RandomForest {
 	    System.out.println("Done in "+TimeElapsed(time_o));
 	}
 	public void writefile(ArrayList<Integer> pred) throws IOException{
-		String pathname="/Users/xiaofan/Documents/workspaceluna/random forest/test_result.txt";
+		
 		File writeName=new File(pathname);
 		writeName.createNewFile();
 		BufferedWriter out=new BufferedWriter(new FileWriter(writeName));
