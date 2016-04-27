@@ -224,7 +224,7 @@ svm-toy:
 'svm-train' Usage
 ------------
 
-Usage: svm-train [options] training_set_file [model_file]
+Usage: svm-train [options] training_set_file [model_file]</br>
 options:
 -s svm_type : set type of SVM (default 0)
     0 -- C-SVC      (multi-class classification)
@@ -287,7 +287,7 @@ svm-predict will produce output in the output_file.
 'svm-scale' Usage
 ------------
 
-Usage: svm-scale [options] data_filename
+Usage: svm-scale [options] data_filename</br>
 options:
 -l lower : x scaling lower limit (default -1)
 -u upper : x scaling upper limit (default +1)
