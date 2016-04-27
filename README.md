@@ -105,16 +105,6 @@ Table of Contents
 - `svm-train' Usage
 - `svm-predict' Usage
 - `svm-scale' Usage
-- Tips on Practical Use
-- Examples
-- Precomputed Kernels 
-- Library Usage
-- Java Version
-- Building Windows Binaries
-- Additional Tools: Sub-sampling, Parameter Selection, Format checking, etc.
-- MATLAB/OCTAVE Interface
-- Python Interface
-- Additional Information
 
 Quick Start
 ---------
