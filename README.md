@@ -127,7 +127,7 @@ If you want to try your own data sets, you have to adjust the format of data.
 
 The format of training and testing data file is:
 
-<label> <index1>:<value1> <index2>:<value2> ...
+"<label> <index1>:<value1> <index2>:<value2> ..."
 
 
 Each line contains an instance and is ended by a '\n' character.  For
