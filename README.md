@@ -128,9 +128,7 @@ If you want to try your own data sets, you have to adjust the format of data.
 The format of training and testing data file is:
 
 <label> <index1>:<value1> <index2>:<value2> ...
-.
-.
-.
+
 
 Each line contains an instance and is ended by a '\n' character.  For
 classification, <label> is an integer indicating the class label
@@ -222,7 +220,6 @@ svm-toy:
 	The pre-built Windows binaries are in the `windows'
 	directory. We use Visual C++ on a 32-bit machine, so the
 	maximal cache size is 2GB.
->>>>>>> 654cc5d2e45607eb17dffd1a9c9bb124cddadb21
 
 `svm-train' Usage
 ---------
@@ -230,7 +227,6 @@ svm-toy:
 Usage: svm-train [options] training_set_file [model_file]
 options:
 -s svm_type : set type of SVM (default 0)
-<<<<<<< HEAD
     0 -- C-SVC      (multi-class classification)
     1 -- nu-SVC     (multi-class classification)
     2 -- one-class SVM  
@@ -254,7 +250,7 @@ options:
 	2 -- radial basis function: exp(-gamma*|u-v|^2)
 	3 -- sigmoid: tanh(gamma*u'*v + coef0)
 	4 -- precomputed kernel (kernel values in training_set_file)
->>>>>>> 654cc5d2e45607eb17dffd1a9c9bb124cddadb21
+
 -d degree : set degree in kernel function (default 3)
 -g gamma : set gamma in kernel function (default 1/num_features)
 -r coef0 : set coef0 in kernel function (default 0)
