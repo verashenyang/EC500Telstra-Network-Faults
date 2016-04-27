@@ -98,7 +98,7 @@ regression. It also provides an automatic model selection tool for
 C-SVM classification. This document explains the use of libsvm.
 
 Table of Contents
----------
+^^^^^^^^
 
 - Quick Start
 - Installation and Data Format
