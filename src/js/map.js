@@ -9,7 +9,7 @@
       zoom: 4,
       center: latlng,
       mapTypeControl: true,
-      mapTypeId: google.maps.MapTypeId.ROADMAP//标准地图还是卫星地图
+      mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     map = new google.maps.Map(document.getElementById("map_canvas"),
         myOptions);
